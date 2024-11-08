@@ -55,13 +55,11 @@ const botaoProximo = document.getElementById('botao-proximo');
 
 
 let indiceQuestaoAtual = 0;
-let pontos = 0;
 
 
 
 function iniciarQuiz() {
     indiceQuestaoAtual = 0;
-    pontos = 0;
     botaoProximo.innerHTML = "Proximo";
     mostrarQuestao();
 }
@@ -100,7 +98,7 @@ function apagarQuestaoAnterior() {
 function selecionarResposta(e) { 
     const botaoSelecionado = e.target;
     
-    if (botaoSelecionado.dataset.correto === "true") {
+    if (botaoSelecionado.dataset.correto === "true") { //Verifica se a resposta está correta
         botaoSelecionado.classList.add('correto');
     } else {
         botaoSelecionado.classList.add('incorreto');
@@ -111,8 +109,24 @@ function selecionarResposta(e) {
         }
         botao.disabled = true; // Desativa o botao para que não seja possível clicar em outros botões após selecionar uma resposta
     });
-    botaoProximo.style.display = "block"; // Faz aparecer o botao de proximo, para que o usuário possa ir para a próxima pergunta do quiz
+    botaoProximo.style.display = "block"; // Faz aparecer o botao de proximo, para que o usuário possa ir para a próxima pergunta do quiz   
 }
+
+
+
+//Evento do clique no botao de proximo (para ir para a proxima questão)
+botaoProximo.addEventListener("click", ()=>{
+    if (indiceQuestaoAtual < perguntas.length - 1) { // Verifica se ainda há questões para serem mostradas, ou se acabaram
+        indiceQuestaoAtual++; // Muda para a proxima questão
+        mostrarQuestao(); // Mostra a questão
+    } else {
+        apagarQuestaoAnterior();
+        imagemDaQuestao.style.display = "none"; // Tira a imagem da tela
+        enunciadoDaQuestao.style.display = "none"; // Tira o enuncaido da tela
+        perguntaDaQuestao.innerHTML = "Parabéns, você completou o nosso quiz sobre carros autônomos!! Para jogar novamente, recarregue a página."
+    }
+}) 
+
 
 iniciarQuiz();
 
