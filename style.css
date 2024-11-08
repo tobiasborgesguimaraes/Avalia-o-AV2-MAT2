@@ -2,6 +2,8 @@
     --black: #000000;
     --white: #fffdfc;
     --azul: #001e4d;
+    --vermelho: #ff9393;
+    --verde: #9aeabc;
 }
 
 * {
@@ -51,6 +53,14 @@ main {
     padding-bottom: 30px;
 }
 
+.app img {
+    padding-top: 5%;
+    width: 400px;
+    height: 250px;   
+    display: block;
+    margin: auto;
+}
+
 .app p {
     padding: 5%;
     font-size: 15px;
@@ -87,5 +97,12 @@ main {
     border-radius: 4px;
     cursor: pointer;
     display: none;
+}
 
+.correto {
+    background: var(--verde);
+}
+
+.incorreto {
+    background: var(--vermelho);
 }
