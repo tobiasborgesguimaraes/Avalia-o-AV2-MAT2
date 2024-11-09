@@ -1,25 +1,26 @@
 
+// Lista das perguntas do quiz
 const perguntas = [
     {
         imagem: "\imagens\imagem-pergunta-1.jpg",
         enunciado: "Carros autônomos fazem forte uso de inteligência artificial. Com diversas câmeras ao redor do carro, a IA deve fazer uma análise profunda da imagem para determinar se há obstruções na pista (como um pedestre, ciclista ou mesmo outro carro), ou se é seguro atravessar.",
-        pergunta: "Qual é a cor do céu?",
+        pergunta: "Se há um pedestre na frente de um carro autônomo, o que é esperado que aconteça?",
         respostas: [
-            { texto: "Azul", correto: true},
-            { texto: "Verde", correto: false},
-            { texto: "Vermelho", correto: false},
-            { texto: "Roxo", correto: false}
+            { texto: "Uma inteligência artificial irá reconhecer a pessoa através de uma câmera e parar o carro.", correto: true},
+            { texto: "A presença da pessoa será detectada por um sensor de proximidade.", correto: false},
+            { texto: "É responsabilidade da pessoa tomar cuidado com a passagem de carros autônomos.", correto: false},
+            { texto: "É responsabilidade do motorista ver o pedestre e parar o carro.", correto: false}
         ]
     },
     {
         imagem: "\imagens\imagem-pergunta-2.jpg",
         enunciado: "Carros autônomos podem se comunicar com outros carros autônomos na estrada, desde que todos eles tenham conexão com a internet, isso possibilita que ambos tomem decisões conjuntas, sobre qual carro irá passar primeiro, e até mesmo evitando colisões entre ambos, já que todos os seus movimentos são coordenados.",
-        pergunta: "Qual é a cor do céu?",
+        pergunta: "De que forma a vantagem dos carros autônomos citada no texto acima pode ser aproveitada ao máximo?",
         respostas: [
-            { texto: "Azul", correto: true},
-            { texto: "Verde", correto: false},
-            { texto: "Vermelho", correto: false},
-            { texto: "Roxo", correto: false}
+            { texto: "Treinando os motoristas para que eles possam dirigir melhor no trânsito.", correto: false},
+            { texto: "Aumentando o tamanho das ruas, dando mais espaço para o tráfego.", correto: false},
+            { texto: "Aumentando a quantidade de carros autônomos na rua, fazendo com que uma maior parte do trânsito possa automaticamente, coordenar seus movimentos.", correto: true},
+            { texto: "Diminuindo a rigorosidade das leis de trânsito, para que os motoristas tenham mais liberdade.", correto: false}
         ]
     },
     {
@@ -46,7 +47,7 @@ const perguntas = [
     }
 ];
 
-
+// Coleta todos os elementos do site
 const imagemDaQuestao = document.getElementById('imagem');
 const enunciadoDaQuestao = document.getElementById('enunciado');
 const perguntaDaQuestao = document.getElementById('pergunta');
@@ -55,7 +56,6 @@ const botaoProximo = document.getElementById('botao-proximo');
 
 
 let indiceQuestaoAtual = 0;
-
 
 
 function iniciarQuiz() {
@@ -88,9 +88,9 @@ function mostrarQuestao() {
 }
 
 function apagarQuestaoAnterior() {
-    botaoProximo.style.display = 'none';
+    botaoProximo.style.display = 'none'; // Deixa de mostrar o botao de proximo
     while (respostasDaQuestao.firstChild) {
-        respostasDaQuestao.removeChild(respostasDaQuestao.firstChild);
+        respostasDaQuestao.removeChild(respostasDaQuestao.firstChild); // Remove todas as alternativas
     }
 }
 
