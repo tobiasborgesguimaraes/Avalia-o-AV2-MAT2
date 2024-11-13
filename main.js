@@ -25,24 +25,24 @@ const perguntas = [
     },
     {
         imagem: "\imagens\imagem-pergunta-1.jpg",
-        enunciado: "Carros autônomos fazem forte uso de inteligência artificial. Com diversas câmeras ao redor do carro, a IA deve fazer uma análise profunda da imagem para determinar se há obstruções na pista (como um pedestre, ciclista ou mesmo outro carro), ou se é seguro atravessar",
-        pergunta: "Qual é a cor do céu?",
+        enunciado: "1,35 milhão de vidas são perdidas por acidentes de trânsito anualmente. Diversos são os motivos que podem fazer uma fatalidade como essa acontecer, mais a maior parte desses motivos estão atrelados ao erro humano. Carros autônomos prometem dar um fim a esses péssimos números, tendo independência do motorista, e tirando o erro humano da nossa preocupação no trânsito.",
+        pergunta: "Qual é o principal benefício dos carros autônomos em comparação aos veículos tradicionais?",
         respostas: [
-            { texto: "Azul", correto: true},
-            { texto: "Verde", correto: false},
-            { texto: "Vermelho", correto: false},
-            { texto: "Roxo", correto: false}
+            { texto: "Menor consumo de combustível.", correto: false},
+            { texto: "Menor custo de produção.", correto: false},
+            { texto: "Aumento da potência do motor.", correto: false},
+            { texto: "Redução de acidentes causados por erro humano.", correto: true}
         ]
     },
     {
         imagem: "\imagens\imagem-pergunta-1.jpg",
-        enunciado: "Carros autônomos fazem forte uso de inteligência artificial. Com diversas câmeras ao redor do carro, a IA deve fazer uma análise profunda da imagem para determinar se há obstruções na pista (como um pedestre, ciclista ou mesmo outro carro), ou se é seguro atravessar",
-        pergunta: "Qual é a cor do céu?",
+        enunciado: "Os carros autônomos estão se tornando cada vez mais presentes em discussões sobre o futuro da mobilidade. Esses veículos são equipados com sensores e inteligência artificial para navegar de forma independente, sem a necessidade de um motorista humano.",
+        pergunta: "Quais são os principais sensores utilizados em carros autônomos para detectar o ambiente ao redor?",
         respostas: [
-            { texto: "Azul", correto: true},
-            { texto: "Verde", correto: false},
-            { texto: "Vermelho", correto: false},
-            { texto: "Roxo", correto: false}
+            { texto: "Radar e câmera.", correto: true},
+            { texto: "Giroscópio e bússola.", correto: false},
+            { texto: "Microfone e alto-falante.", correto: false},
+            { texto: "Termômetro e barômetro.", correto: false}
         ]
     }
 ];
